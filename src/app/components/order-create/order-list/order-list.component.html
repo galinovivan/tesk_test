@@ -1,18 +1,5 @@
-<div class="order_list">
- <ul>
-   <li *ngFor="let order of orderList">
-      <div class="userName">
-        <span>{{ order.userName }}</span>
-      </div>
-      <div class="item_color">
-        <span>{{ order.itemColor }}</span>
-      </div>
-      <div class="item_size">
-        <span>{{ order.itemSize }}</span>
-      </div>
-      <div class="date">
-        <span>{{ order.date }}</span>
-      </div>
-   </li>
- </ul>
-</div>
+<ul>
+  <li *ngFor="let order of orderList">
+    <app-order-item [order]="order"></app-order-item>
+  </li>
+</ul>

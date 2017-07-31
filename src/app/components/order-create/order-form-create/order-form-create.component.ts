@@ -22,14 +22,21 @@ export class OrderFormCreateComponent {
       'subscrible': [true, Validators.requiredTrue]
     });
    }
-   formSubmit(order) {
-    this.orderService.create(order)
-      .subscribe((data) => {
-        this.createOrder = data;
-        this.isDone = true;
-      })
+   formSubmit() {
+    // this.orderService.create(order)
+    //   .subscribe((data) => {
+    //     this.createOrder = data;
+    //     this.isDone = true;
+    //   })
+    if (!this.orderForm.valid) {
+      return false;
+    }
+    let data: Order = this.orderForm.value;
+    this.createOrder = data;
+    this.isDone = true;
    }
-
-
-
+  createAnotherOrderClick() {
+    this.orderForm.reset();
+    this.isDone = false;
+  }
 }

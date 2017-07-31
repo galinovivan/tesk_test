@@ -21,6 +21,7 @@ import { LayoutComponent } from './components/layout/layout.component';
 import { OrderFormCreateComponent } from './components/order-create/order-form-create/order-form-create.component';
 import { NavComponent } from './components/nav/nav.component';
 import { OrderListComponent } from './components/order-create/order-list/order-list.component';
+import { OrderItemComponent } from './components/order-create/order-item/order-item.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { OrderListComponent } from './components/order-create/order-list/order-l
     LayoutComponent,
     OrderFormCreateComponent,
     NavComponent,
-    OrderListComponent
+    OrderListComponent,
+    OrderItemComponent
   ],
   imports: [
     BrowserModule,
