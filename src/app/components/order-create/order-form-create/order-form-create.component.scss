@@ -1,15 +1,25 @@
-.item-form {
-  margin: 25px 0;
+// $fieldWidth: 30%;
+// .item-form {
+//   .field_wrapper {
+//     margin: auto;
+//     width: $fieldWidth;
+//   }
+//   button:not(.mat-datepicker-toggle) {
+//     width: $fieldWidth;
+//     height: 50px;
+//     background-color: #ff4081;
+//     color: #fff;
+//     font-size: 18px;
+//     text-transform: uppercase;
+//   }
+// }
+form {
   .field_wrapper {
-    min-width: 40vw;
-  }
-  button:not(.mat-datepicker-toggle) {
     width: 100%;
-    height: 50px;
-    background-color: #ff4081;
-    color: #fff;
-    font-size: 18px;
-    text-transform: uppercase;
+    margin: 10px 0;
+  }
+  .submit_button {
+    background: #ff4081;
+    color: #ffffff;
   }
 }
-

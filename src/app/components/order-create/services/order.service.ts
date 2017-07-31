@@ -11,12 +11,12 @@ import { Order } from '../model/order.model';
 @Injectable()
 
 export class OrderService {
-  private apiUrl = 'http://localhost/order/';
+  private apiUrl = 'http://rest.api';
   constructor(private http: Http) {};
   getAll(): Observable<Order[]> {
     return this.http.get(this.apiUrl)
     .map((response: Response) => {
-      const data = response.json().data;
+      const data = response.json();
       let orders: Order[] = [];
       for (let i in data) {
         orders.push(data[i]);

@@ -1,35 +1,31 @@
 <form [formGroup]="orderForm" novalidate (submit)="formSubmit()">
-  <div class="item-form">
 <md-input-container class="field_wrapper">
   <input type="text"  placeholder="name" mdInput formControlName="userName"/>
 </md-input-container>
-  </div>
-  <div class="item-form">
+<div class="field_wrapper">
 <md-select placeholder="color" formControlName="itemColor" class="field_wrapper">
   <md-option value="red">Red</md-option>
   <md-option value="blue">Blue</md-option>
 </md-select>
-  </div>
-  <div class="item-form">
+</div>
+<div class="field_wrapper">
     <p>Choose size</p>
   <md-radio-group formControlName="itemSize" class="radio_group">
     <md-radio-button value="xs" class="radio">xs</md-radio-button>
     <md-radio-button value="sm" class="radio">sm</md-radio-button>
   </md-radio-group>
-  </div>
-  <div class="item-form">
+</div>
     <md-input-container class="field_wrapper">
     <input mdInput [mdDatepicker]="picker" placeholder="Choose a date" formControlName="date">
     <button mdSuffix [mdDatepickerToggle]="picker"></button>
   </md-input-container>
   <md-datepicker #picker></md-datepicker>
-  </div>
-  <div class="item-form">
+  <div class="field_wraapper">
     <md-checkbox formControlName="subscrible">
     I` sub
     </md-checkbox>
   </div>
-  <div class="item-form">
-    <button type="submit" md-raised-button>Save</button>
+  <div class="field_wrapper">
+    <button type="submit" md-raised-button class="submit_button">Save</button>
   </div>
 </form>
