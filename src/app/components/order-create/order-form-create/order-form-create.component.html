@@ -1,6 +1,6 @@
 <div class="order" *ngIf="isDone; else unset">
 <app-order-item [order]="createOrder"></app-order-item>
-<button (click)="createAnotherOrderClick()" md-raised-button class="button">Create another order</button>
+<button routerLink="orders" md-raised-button class="button">See another orders</button>
 </div>
 <ng-template #unset>
 <form [formGroup]="orderForm" novalidate (submit)="formSubmit()">

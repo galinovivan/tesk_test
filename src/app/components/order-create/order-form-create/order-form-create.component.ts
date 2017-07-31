@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 import { OrderService } from '../services/order.service';
+import { MdSnackBar } from '@angular/material';
+
 import { Order } from '../model/order.model';
 
 @Component({
@@ -13,7 +15,7 @@ export class OrderFormCreateComponent {
   orderForm: FormGroup;
   createOrder: Order;
   isDone: boolean = false;
-  constructor(private formBuilder: FormBuilder, private orderService: OrderService) {
+  constructor(private formBuilder: FormBuilder, private orderService: OrderService, private snackBar: MdSnackBar) {
     this.orderForm = this.formBuilder.group({
       'userName': ['', Validators.required],
       'itemColor': ['', Validators.required],
@@ -34,9 +36,11 @@ export class OrderFormCreateComponent {
     let data: Order = this.orderForm.value;
     this.createOrder = data;
     this.isDone = true;
+    this.openSnackBar('You order is done');
    }
-  createAnotherOrderClick() {
-    this.orderForm.reset();
-    this.isDone = false;
-  }
+   private openSnackBar(message: string) {
+      this.snackBar.open(message, '', {
+        duration: 2000
+      })     
+   }
 }

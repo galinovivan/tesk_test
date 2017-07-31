@@ -12,6 +12,7 @@ import { MdDatepickerModule } from '@angular/material';
 import { MdRadioModule } from '@angular/material';
 import { MdCheckboxModule } from '@angular/material';
 import { MdButtonModule } from '@angular/material';
+import { MdSnackBarModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { OrderCreateComponent } from './components/order-create/order-create.component';
@@ -46,6 +47,7 @@ import { OrderItemComponent } from './components/order-create/order-item/order-i
     MdRadioModule,
     MdCheckboxModule,
     MdButtonModule,
+    MdSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
