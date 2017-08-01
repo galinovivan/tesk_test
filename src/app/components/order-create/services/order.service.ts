@@ -32,7 +32,7 @@ export class OrderService {
     const headers = new Headers({ 'Content-Type': 'application/json;charset=utf-8' });
     return this.http.post(this.apiUrl, body, { headers: headers })
       .map((response: Response) => {
-      response.json();
+      return response.json();
       })
       .catch((error: any) => {
       return Observable.throw(error);

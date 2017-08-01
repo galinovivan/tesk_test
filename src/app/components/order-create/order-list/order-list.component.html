@@ -1,5 +1,1 @@
-<ul>
-  <li *ngFor="let order of orderList">
-    <app-order-item [order]="order"></app-order-item>
-  </li>
-</ul>
+<app-order-item *ngFor="let order of orderList" [order]="order"></app-order-item>

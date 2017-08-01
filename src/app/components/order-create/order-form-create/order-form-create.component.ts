@@ -31,6 +31,7 @@ export class OrderFormCreateComponent {
     //     this.isDone = true;
     //   })
     if (!this.orderForm.valid) {
+      this.openSnackBar('form is invalid');
       return false;
     }
     let data: Order = this.orderForm.value;

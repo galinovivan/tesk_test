@@ -5,7 +5,7 @@ import 'hammerjs';
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { MdInputModule } from '@angular/material';
+import { MdInputModule, } from '@angular/material';
 import { MdSelectModule } from '@angular/material';
 import { MdNativeDateModule } from '@angular/material';
 import { MdDatepickerModule } from '@angular/material';
@@ -13,6 +13,7 @@ import { MdRadioModule } from '@angular/material';
 import { MdCheckboxModule } from '@angular/material';
 import { MdButtonModule } from '@angular/material';
 import { MdSnackBarModule } from '@angular/material';
+import { MdCardModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { OrderCreateComponent } from './components/order-create/order-create.component';
@@ -47,7 +48,8 @@ import { OrderItemComponent } from './components/order-create/order-item/order-i
     MdRadioModule,
     MdCheckboxModule,
     MdButtonModule,
-    MdSnackBarModule
+    MdSnackBarModule,
+    MdCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

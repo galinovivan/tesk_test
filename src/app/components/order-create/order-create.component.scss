@@ -1,7 +1,13 @@
-h2 {
-    text-align: center;
+
+.form_card {
+    margin: auto;
+    width: 400px;
 }
-.form {
-    width: 50%;
-  margin: auto;
+.create_form {
+    h2 {
+        text-align: center;
+    }
+    .form {
+    margin: auto;
+    }
 }
