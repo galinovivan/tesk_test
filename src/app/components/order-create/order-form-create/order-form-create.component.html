@@ -5,6 +5,7 @@
 <ng-template #unset>
 <form [formGroup]="orderForm" novalidate (submit)="formSubmit()">
 <md-input-container class="field_wrapper">
+  <input type="hidden" formControlName="id" [(ngModel)]="id" />
   <input type="text"  placeholder="name" mdInput formControlName="userName"/>
   <md-error *ngIf="!orderForm.controls['userName'].valid && orderForm.controls['userName'].touched">
     this field is required

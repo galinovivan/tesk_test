@@ -29,6 +29,7 @@ export class OrderService {
   };
   create(order: Order): Observable<any> {
     const body = JSON.stringify(order);
+    console.log(body);
     const headers = new Headers({ 'Content-Type': 'application/json;charset=utf-8' });
     return this.http.post(this.apiUrl, body, { headers: headers })
       .map((response: Response) => {

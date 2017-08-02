@@ -12,11 +12,13 @@ import { Order } from '../model/order.model';
   providers: [OrderService]
 })
 export class OrderFormCreateComponent {
+  private id = 1;
   orderForm: FormGroup;
   createOrder: Order;
   isDone: boolean = false;
   constructor(private formBuilder: FormBuilder, private orderService: OrderService, private snackBar: MdSnackBar) {
     this.orderForm = this.formBuilder.group({
+      'id': ['', Validators.required],
       'userName': ['', Validators.required],
       'itemColor': ['', Validators.required],
       'itemSize': ['', Validators.required],
@@ -34,10 +36,17 @@ export class OrderFormCreateComponent {
       this.openSnackBar('form is invalid');
       return false;
     }
-    let data: Order = this.orderForm.value;
-    this.createOrder = data;
-    this.isDone = true;
-    this.openSnackBar('You order is done');
+
+    let order: Order = this.orderForm.value;
+    this.orderService.create(order)
+      .subscribe((data) => {
+        this.createOrder = order;
+        this.isDone = true;
+        this.openSnackBar('ok');
+      },
+    (error) => {
+        console.log(error);
+    })
    }
    private openSnackBar(message: string) {
       this.snackBar.open(message, '', {
