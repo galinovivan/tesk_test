@@ -1,9 +1,0 @@
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
-body {
-  font-family: Arial, sans-serif !important;
-  background-color: #f5fffa;
-}
-
-h2 {
-  font-weight: normal;
-}
