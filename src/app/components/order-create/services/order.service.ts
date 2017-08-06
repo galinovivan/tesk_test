@@ -11,7 +11,7 @@ import { Order } from '../model/order.model';
 @Injectable()
 
 export class OrderService {
-  private apiUrl = 'http://rest.api';
+  private apiUrl = 'http://localhost:61988/api/Orders';
   constructor(private http: Http) {};
   getAll(): Observable<Order[]> {
     return this.http.get(this.apiUrl)
@@ -21,6 +21,7 @@ export class OrderService {
       for (let i in data) {
         orders.push(data[i]);
       }
+      console.log(orders);
       return orders;
     })
     .catch((error: any) => {

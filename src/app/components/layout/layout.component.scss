@@ -2,4 +2,9 @@
   margin: auto;
   width: 80vw;
   padding-top: 100px;
+  position: relative;
+  nav {
+    position: fixed;
+    top: 0;
+  }
 }

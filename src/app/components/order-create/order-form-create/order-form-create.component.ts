@@ -18,7 +18,7 @@ export class OrderFormCreateComponent {
   isDone: boolean = false;
   constructor(private formBuilder: FormBuilder, private orderService: OrderService, private snackBar: MdSnackBar) {
     this.orderForm = this.formBuilder.group({
-      'id': ['', Validators.required],
+     // 'id': ['', Validators.required],
       'userName': ['', Validators.required],
       'itemColor': ['', Validators.required],
       'itemSize': ['', Validators.required],
@@ -38,15 +38,17 @@ export class OrderFormCreateComponent {
     }
 
     let order: Order = this.orderForm.value;
+    console.log(order.date);
     this.orderService.create(order)
       .subscribe((data) => {
-        this.createOrder = order;
+        this.createOrder = data;
         this.isDone = true;
-        this.openSnackBar('ok');
+        this.openSnackBar('the is a successfull created');
       },
     (error) => {
         console.log(error);
-    })
+    });
+    console.log(this);
    }
    private openSnackBar(message: string) {
       this.snackBar.open(message, '', {

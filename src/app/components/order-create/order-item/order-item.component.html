@@ -1,5 +1,7 @@
-<div>
-    <div class="id">{{ order.id }}</div>
+<md-card class="item_card">
+<div class="order_item">
+    <div class="id">
+        <span>id: {{ order.id }}</span></div>
     <div class="user_name">
         <span>User name: {{ order.userName }}</span>
     </div>
@@ -13,3 +15,4 @@
         <span>date: {{ order.date | date }}</span>
     </div>
 </div>
+</md-card>
