@@ -40,14 +40,14 @@
   <md-datepicker #picker></md-datepicker>
   <div class="field_wraapper">
     <md-checkbox formControlName="subscrible">
-    I` sub
+    I agree to the terms of service
     </md-checkbox>
   <md-error *ngIf="!orderForm.controls['subscrible'].valid && orderForm.controls['subscrible'].touched">
-    You must subscribe
+    The field is required
   </md-error>
   </div>
   <div class="field_wrapper">
-    <button md-raised-button class="button" [disabled]="!orderForm.valid">Save</button>
+    <button md-raised-button class="button" [disabled]="!orderForm.valid">Create</button>
   </div>
 </form>
 </ng-template>
